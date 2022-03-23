@@ -1,6 +1,6 @@
-package day_01.hs;
+package day_01.classroom;
 
-public class day_01 {
+public class bai1 {
     public int age;
     public static final double PI = 3.14;
     public static void main(String[] args) {
@@ -33,21 +33,21 @@ public class day_01 {
 //
 //        System.out.println("BMI : " + BMI);
 
-            double toan = 9;
-            double li = 8;
-            double hoa = 7;
+        double toan = 9;
+        double li = 8;
+        double hoa = 7;
 
-            double TB = (toan+li+hoa)/3;
+        double TB = (toan+li+hoa)/3;
 
-            System.out.println("TB : " + TB);
-            System.out.println("số pi :"+PI);
-            System.out.println("Xin chào \t tôi tên \n là \"Hiệp\"");
+        System.out.println("TB : " + TB);
+        System.out.println("số pi :"+PI);
+        System.out.println("Xin chào \t tôi tên \n là \"Hiệp\"");
 
 
-            int a=5;
-            int b=2;
+        int a=5;
+        int b=2;
 
-            double c=(double) 5/2;
-            System.out.println(c);
+        double c=(double) 5/2;
+        System.out.println(c);
     }
 }
