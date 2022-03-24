@@ -1,5 +1,7 @@
 package day_02.classroom;
 
+import java.time.LocalDate;
+import java.time.Month;
 import java.util.Locale;
 
 public class demo_String {
@@ -51,6 +53,15 @@ public class demo_String {
         String rs = temp.toUpperCase()+fullname.substring(1).toLowerCase();
         System.out.println(rs);
         System.out.println(temp.toUpperCase()+namefull.substring(1));
+
+
+        Season muadong= Season.WINTER;
+        System.out.println(muadong);
+
+        Month thangHai= Month.FEBRUARY;
+        System.out.println(thangHai);
+
+
 
     }
 }
