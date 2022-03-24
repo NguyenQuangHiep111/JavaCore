@@ -25,5 +25,8 @@ public class DateTime {
 
         LocalTime time = LocalTime.now();
         System.out.println(time);
+
+        LocalTime currenttime = LocalTime.of(12,30);
+
     }
 }
