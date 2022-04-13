@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Student {
     //    id, tên, điểm lý
-//    thuyết, điểm thực hành, trườn
+//    thuyết, điểm thực hành, trường
     public int id;
     public String name;
     public float theoryPoint;
