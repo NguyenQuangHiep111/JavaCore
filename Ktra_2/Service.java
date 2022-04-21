@@ -72,7 +72,7 @@ public class Service {
                                 System.exit(1);
                                 break;
                             default:
-                                System.out.println("Không có lựa chọn này, tự động back ra menu chính");
+                                System.out.println("Không có lựa chọn này");
                                 break;
                         }
                     }
