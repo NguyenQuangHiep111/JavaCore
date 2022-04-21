@@ -1,9 +1,12 @@
 package Ktra_2;
+
 import java.util.Scanner;
 import java.util.ArrayList;
+
 public class Service {
     ArrayList<Account> accounts = Repository.getData();
     Scanner sc = new Scanner(System.in);
+
     public void goLogin() {
         int count = 0;
         System.out.println("ĐĂNG NHẬP");
@@ -24,8 +27,10 @@ public class Service {
                         switch (choice) {
                             case 1:
                                 System.out.println("Nhập username mới: ");
-                                String newUsername = sc.nextLine();
+                                //String newUsername = sc.nextLine();
+                                String newUsername = CheckInput.checkUsername();
                                 accounts.get(i).setUsername(newUsername);
+                                System.out.println("Đổi username thành công");
                                 break;
                             case 2:
                                 System.out.println("Nhập email mới: ");
@@ -75,23 +80,28 @@ public class Service {
             }
         }
         if (count == 0) {
-            System.out.println("Tài khoản chưa đúng!" + "\n" + "*Chọn 1 để đăng nhập lại." + "\n" + "*Chưa có tài khoản chọn 2 để đăng ký." + "\n" + "*Chọn số bất kỳ đê thoát");
+            System.out.println("Kiểm tra lại username");
             boolean isCheck3 = false;
             while (!isCheck3) {
-                int choice = Integer.parseInt(sc.nextLine());
-                switch (choice) {
-                    case 1:
-                        goLogin();
-                        break;
-                    case 2:
-                        goSignin();
-                        break;
-                    default:
-                        isCheck3 = true;
-                        System.exit(1);
-                        break;
-                }
+                goLogin();
             }
+//            System.out.println("Tài khoản chưa đúng!" + "\n" + "*Chọn 1 để đăng nhập lại." + "\n" + "*Chưa có tài khoản chọn 2 để đăng ký." + "\n" + "*Chọn số bất kỳ đê thoát");
+//            boolean isCheck3 = false;
+//            while (!isCheck3) {
+//                int choice = Integer.parseInt(sc.nextLine());
+//                switch (choice) {
+//                    case 1:
+//                        goLogin();
+//                        break;
+//                    case 2:
+//                        goSignin();
+//                        break;
+//                    default:
+//                        isCheck3 = true;
+//                        System.exit(1);
+//                        break;
+//                }
+            //         }
         }
     }
 
@@ -100,31 +110,32 @@ public class Service {
         System.out.println("Nhập username: ");
         int count = 0;
         boolean isContinue = false;
-        while (!isContinue){
+        while (!isContinue) {
             String newUsername = CheckInput.checkUsername();
-            for (int i = 0; i <accounts.size(); i++){
-                if(accounts.get(i).getUsername().equals(newUsername)){
+            for (int i = 0; i < accounts.size(); i++) {
+                if (accounts.get(i).getUsername().equals(newUsername)) {
                     System.out.println("Tài khoản đã tồn tại, vui lòng nhập username khác: ");
                     count++;
+
                 }
+
             }
-            if (count == 0){
+            if (count == 0) {
                 String username = newUsername;
                 System.out.println("Nhập email: ");
                 String email = CheckInput.checkEmail();
                 System.out.println("Nhập mật khẩu: ");
                 String password = CheckInput.checkPassword();
-                Account newAcc = new Account(username,password,email );
+                Account newAcc = new Account(username, password, email);
                 System.out.println("Tạo tài khoản thành công");
                 accounts.add(newAcc);
                 System.out.println("Thông tin tài khoản mới vừa đăng ký");
-                for (int i = 0; i < accounts.size();i++){
+                for (int i = 0; i < accounts.size(); i++) {
                     System.out.println(accounts.get(i));
                 }
                 isContinue = true;
             }
         }
-
 
 
     }

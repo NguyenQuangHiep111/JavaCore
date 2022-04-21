@@ -42,7 +42,7 @@ public class CheckInput {
             try {
                 password = sc.nextLine();
                 if (!Validate.validatePassword(password))
-                    throw new MyException("Nhập pass word 7-14 ký tự bao gồm 1 chữ viết Hoa và 1 ký tự đặc biệt, ");
+                    throw new MyException("Nhập pass word 7-14 ký tự bao gồm 1 chữ viết Hoa và 1 ký tự đặc biệt");
                 isCheck = true;
             } catch (MyException e) {
                 System.out.println(e.getMessage() + "vui lòng nhập lại");

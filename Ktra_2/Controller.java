@@ -18,9 +18,9 @@ public class Controller {
                 case 2:
                     service.goSignin();
                     break;
-                case 3:
-                    System.out.println("In ra tất cả: ");
-                    System.out.println(listAcc);
+//                case 3:
+//                    System.out.println("In ra tất cả: ");
+//                    System.out.println(listAcc);
                 case 0:
                     isCheck = true;
                     System.exit(1);
