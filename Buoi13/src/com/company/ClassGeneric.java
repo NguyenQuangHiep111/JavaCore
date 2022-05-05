@@ -1,5 +1,6 @@
 package com.company;
 
-public class ClassGeneric {
+public class ClassGeneric<T> {
+public T obj;
 
 }
